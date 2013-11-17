@@ -116,6 +116,10 @@ class BallBoxer < Gosu::Window
     @player.goto(360, 240)
   end
 
+  def needs_cursor?
+    true
+  end
+
   def update
     if button_down?(Gosu::KbLeft) || button_down?(Gosu::GpLeft)
       @player.move_left
